@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment Four: Joe's Hotdogs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>
+        Joe's Hotdog Receipt 
+        <div>
+          <img src="dog.jpg" width="10%">
+        </div>
+</h1>
+
+
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Order</td>
+    <td>
+    <script language = "javascript">
+var numDogs = window.prompt("How many hotdogs?");
+       document.write(numDogs + " Hotdogs" + "<br>");
+       
+var numFries = window.prompt("How many fries?");
+       document.write(numFries + " Fries"+ "<br>");
+
+var numDrinks = window.prompt("How many drinks?");
+       document.write(numDrinks + " Drinks" + "<br>");
+    </script></td>
+   
+  </tr>
+  <tr>
+    <td>Subtotal</td>
+    
+    <td>
+    <script language = "javascript">
+    var subTotal = (numDogs * 3.75) + (numFries * 2) + (numDrinks * 1.5);
+       document.write(subTotal + "<br>");
+    </script>
+    </td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td>Discount</td>
+    <td>
+    <script language = "javascript">
+    var discount;
+    if (subTotal >= 20) {
+        discount = subTotal * .1;
+        subTotal = subTotal * .9;
+       }
+    else{
+        discount = 0
+    }
+    
+    var roundedDiscount = discount.toFixed(2);
+    document.write(roundedDiscount);
+    
+    
+    </script>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td>Tax</td>
+    <td>
+    
+    <script language = "javascript">
+    var taxAmount = subTotal * .0625;
+    var roundTax = taxAmount.toFixed(2);
+       
+    document.write(roundTax);
+    
+    
+    </script>
+    
+    </td>
+   
+  </tr>
+  
+  
+  
+  <tr>
+    <td>Total</td>
+    <td>
+    
+    <script language = "javascript">
+    var total = subTotal * 1.0625;
+    var roundedTotal = total.toFixed(2);
+       
+    document.write(roundedTotal);
+    
+    
+    </script>
+    
+    </td>
+    
+  </tr>
+  
+</table>
+
+<p>Orders of over $20 get a 10% discount!!!</p>
+
+</body>
+</html>
